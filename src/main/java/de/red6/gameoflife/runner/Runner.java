@@ -58,7 +58,7 @@ public class Runner {
         final Random random = new Random(seed);
         final BigInteger livingCells = BigInteger.valueOf(boardSize).pow(2).multiply(BigInteger.valueOf(initialFillingLevel)).divide(BigInteger.valueOf(100));
         for (long i = 0; i < livingCells.longValue(); ++i) {
-            this.board.setAlive(random.nextInt(boardSize), random.nextInt(boardSize), true);
+            this.board.setAlive(random.nextInt(boardSize), random.nextInt(boardSize));
         }
     }
 }
