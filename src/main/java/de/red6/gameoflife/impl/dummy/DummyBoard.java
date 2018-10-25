@@ -15,7 +15,7 @@ public class DummyBoard implements Board {
     }
 
     @Override
-    public void setAlive(int x, int y, boolean alive) {
+    public void setAlive(int x, int y) {
         // nope
     }
 
