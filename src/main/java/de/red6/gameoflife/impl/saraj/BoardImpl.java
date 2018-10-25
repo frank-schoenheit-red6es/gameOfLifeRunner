@@ -62,8 +62,7 @@ public class BoardImpl implements Board {
     int getNumberOfAliveNeighbours(Cell cell){
         Set<Cell> neighbours = computeNeighbours(cell);
         return (int) aliveCells.stream()
-                .parallel()
-                .filter(currentCell -> neighbours.contains(currentCell))
+                .filter(neighbours::contains)
                 .count();
     }
 
