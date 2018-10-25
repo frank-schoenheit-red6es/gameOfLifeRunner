@@ -7,7 +7,7 @@ implementations="${implementations} de.red6.gameoflife.daniel.GameOfLifeMitAbbru
 implementations="${implementations} de.red6.gameoflife.daniel.GameOfLife"
 
 declare filling_level="10 40 80"
-declare size="16 1024 4096"
+declare size="1024 4096"
 declare steps=200
 
 echo "implementation,boardSize,level,steps,milliSeconds"
