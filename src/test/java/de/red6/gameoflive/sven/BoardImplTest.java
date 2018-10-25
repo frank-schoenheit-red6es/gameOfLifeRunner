@@ -1,4 +1,4 @@
-package de.red6.gameoflife.daniel;
+package de.red6.gameoflive.sven;
 
 import de.red6.gameoflife.board.AbstractBoardTest;
 import static org.junit.Assert.*;
@@ -6,8 +6,8 @@ import static org.junit.Assert.*;
 /**
  * @author <a href="mailto:frank.schoenheit@red6-es.de">Frank Scho&ouml;nheit</a>
  */
-public class GameOfLifeMitAbbruchTest extends AbstractBoardTest {
-    public GameOfLifeMitAbbruchTest() {
-        super(GameOfLifeMitAbbruch.class);
+public class BoardImplTest extends AbstractBoardTest {
+    public BoardImplTest() {
+        super(BoardImpl.class);
     }
 }

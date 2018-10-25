@@ -3,8 +3,8 @@
 declare implementations=""
 #implementations="${implementations} de.red6.gameoflife.impl.saraj.BoardImpl"
 #implementations="${implementations} de.red6.gameoflife.impl.saraj2.BoardImpl"
-implementations="${implementations} de.red6.gameoflife.daniel.GameOfLifeMitAbbruch"
 implementations="${implementations} de.red6.gameoflife.daniel.GameOfLife"
+implementations="${implementations} de.red6.gameoflife.daniel.GameOfLifeNeighbours"
 
 declare filling_level="10 40 80"
 declare size="1024 4096"
