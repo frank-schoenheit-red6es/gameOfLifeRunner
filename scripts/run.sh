@@ -1,8 +1,13 @@
 #!/bin/bash
 
-declare implementations="de.red6.gameoflife.daniel.GameOfLife"
+declare implementations=""
+#implementations="${implementations} de.red6.gameoflife.impl.saraj.BoardImpl"
+#implementations="${implementations} de.red6.gameoflife.impl.saraj2.BoardImpl"
+implementations="${implementations} de.red6.gameoflife.daniel.GameOfLifeMitAbbruch"
+implementations="${implementations} de.red6.gameoflife.daniel.GameOfLife"
+
 declare filling_level="10 40 80"
-declare size="16 1024 4096"
+declare size="1024 4096"
 declare steps=200
 
 echo "implementation,boardSize,level,steps,milliSeconds"
