@@ -1,4 +1,4 @@
-/*
+package de.red6.gameoflife.runner;/*
  * Created on 25.10.18
  */
 
