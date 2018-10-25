@@ -6,8 +6,8 @@ import static org.junit.Assert.*;
 /**
  * @author <a href="mailto:frank.schoenheit@red6-es.de">Frank Scho&ouml;nheit</a>
  */
-public class GameOfLifeMitAbbruchTest extends AbstractBoardTest {
-    public GameOfLifeMitAbbruchTest() {
-        super(GameOfLifeMitAbbruch.class);
+public class GameOfLifeNeighboursTest extends AbstractBoardTest {
+    public GameOfLifeNeighboursTest() {
+        super(GameOfLifeNeighbours.class);
     }
 }
