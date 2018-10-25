@@ -11,8 +11,7 @@ import java.util.Random;
  */
 class AbstractBoardRunner {
     static Board createBoard(final String implementationName, int boardSize) throws ClassNotFoundException, InstantiationException, IllegalAccessException, java.lang.reflect.InvocationTargetException, NoSuchMethodException {
-        @SuppressWarnings("unchecked")
-        final Class<? extends Board> boardClass = (Class<? extends Board>) Class.forName(implementationName);
+        @SuppressWarnings("unchecked") final Class<? extends Board> boardClass = (Class<? extends Board>) Class.forName(implementationName);
         final Board board = boardClass.getConstructor().newInstance();
         board.init(boardSize);
         return board;
@@ -20,8 +19,16 @@ class AbstractBoardRunner {
 
     static void initializeBoard(final Board board, final int boardSize, final int fillLevel, final Random random) {
         final BigInteger livingCells = BigInteger.valueOf(boardSize).pow(2).multiply(BigInteger.valueOf(fillLevel)).divide(BigInteger.valueOf(100));
-        for (long i = 0; i < livingCells.longValue(); ++i) {
-            board.setAlive(random.nextInt(boardSize), random.nextInt(boardSize));
+
+        long livingCount = 0;
+        while (livingCount < livingCells.longValue()) {
+            final int x = random.nextInt(boardSize);
+            final int y = random.nextInt(boardSize);
+            if (board.isAlive(x, y)) {
+                continue;
+            }
+            board.setAlive(x, y);
+            ++livingCount;
         }
     }
 }
