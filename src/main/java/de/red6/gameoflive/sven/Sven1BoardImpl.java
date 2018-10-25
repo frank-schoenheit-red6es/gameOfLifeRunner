@@ -3,7 +3,7 @@ package de.red6.gameoflive.sven;
 import de.red6.gameoflife.runner.Board;
 
 
-public class SvenBoardImpl implements Board {
+public class Sven1BoardImpl implements Board {
 
 
     private boolean[][] board;
@@ -31,7 +31,7 @@ public class SvenBoardImpl implements Board {
         int maxx = Math.min(x + 1, size - 1);
         int maxy = Math.min(y + 1, size - 1);
         for (int ax = Math.max(x - 1,0); ax <= maxx; ax++) {
-            for (int ay = Math.max(x - 1,0); ay <= maxy; ay++) {
+            for (int ay = Math.max(y - 1,0); ay <= maxy; ay++) {
                 if ((ax != x || ay != y) && board[ax][ay]) {
                     count++;
                     if (count == 4) {

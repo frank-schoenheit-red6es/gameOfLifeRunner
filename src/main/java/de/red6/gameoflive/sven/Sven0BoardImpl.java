@@ -3,7 +3,7 @@ package de.red6.gameoflive.sven;
 import de.red6.gameoflife.runner.Board;
 
 
-public class BoardImpl implements Board {
+public class Sven0BoardImpl implements Board {
 
 
     private Position[][] board;

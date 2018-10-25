@@ -5,7 +5,7 @@ declare implementations=""
 #implementations="${implementations} de.red6.gameoflife.impl.saraj2.BoardImpl"
 #implementations="${implementations} de.red6.gameoflife.daniel.GameOfLife"
 #implementations="${implementations} de.red6.gameoflife.daniel.GameOfLifeNeighbours"
-implementations="${implementations} de.red6.gameoflive.sven.BoardImpl"
+implementations="${implementations} de.red6.gameoflive.sven.Sven0BoardImpl"
 #implementations="${implementations} de.red6.gameoflife.impl.saraj3.BoardImpl"
 
 declare filling_level="10 40 80"
