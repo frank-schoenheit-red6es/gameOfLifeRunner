@@ -1,6 +1,8 @@
 #!/bin/bash
 
 declare implementations=""
+implementations="${implementations} de.red6.gameoflife.sven.IntArrayBoardWithEnlargmentImpl"
+implementations="${implementations} de.red6.gameoflife.sven.IntArrayBoardImpl"
 implementations="${implementations} benjamin.Board"
 implementations="${implementations} de.red6.gameoflife.daniel.GameOfLife"
 implementations="${implementations} de.red6.gameoflife.daniel.GameOfLifeNeighbours"
@@ -8,9 +10,6 @@ implementations="${implementations} de.red6.gameoflife.frank.BitSetBoard"
 implementations="${implementations} de.red6.gameoflife.frank.BooleanArrayBoard"
 implementations="${implementations} de.red6.gameoflife.frank.CalcNeighboursOnceBoard"
 implementations="${implementations} de.red6.gameoflife.frank.EnlargedBooleaArrayBoard"
-implementations="${implementations} de.red6.gameoflive.sven.Sven0BoardImpl"
-implementations="${implementations} de.red6.gameoflive.sven.Sven1BoardImpl"
-implementations="${implementations} de.red6.gameoflive.sven.Sven2BoardImpl"
 implementations="${implementations} de.red6.gameoflife.impl.saraj.BoardImpl"
 implementations="${implementations} de.red6.gameoflife.impl.saraj2.BoardImpl"
 implementations="${implementations} de.red6.gameoflife.impl.saraj3.BoardImpl"

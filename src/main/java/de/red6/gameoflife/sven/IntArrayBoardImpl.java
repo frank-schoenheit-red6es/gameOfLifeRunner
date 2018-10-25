@@ -1,11 +1,11 @@
-package de.red6.gameoflive.sven;
+package de.red6.gameoflife.sven;
 
 import de.red6.gameoflife.runner.Board;
 
 import java.util.Objects;
 
 
-public class SvensFastestBoardImpl implements Board {
+public class IntArrayBoardImpl implements Board {
 
 
     private int[][] board1;
@@ -29,15 +29,39 @@ public class SvensFastestBoardImpl implements Board {
     }
 
     private int countNeighbours(int x, int y) {
-        int c =0;
-        try {c+=board1[x][y + 1] ;}catch (ArrayIndexOutOfBoundsException e){}
-        try {c+=board1[x][y - 1]  ;}catch (ArrayIndexOutOfBoundsException e){}
-        try {c+=board1[x + 1][y + 1] ;}catch (ArrayIndexOutOfBoundsException e){}
-        try {c+=board1[x + 1][y] ;}catch (ArrayIndexOutOfBoundsException e){}
-        try {c+=board1[x + 1][y - 1] ;}catch (ArrayIndexOutOfBoundsException e){}
-        try {c+=board1[x - 1][y + 1] ;}catch (ArrayIndexOutOfBoundsException e){}
-        try {c+=board1[x - 1][y] ;}catch (ArrayIndexOutOfBoundsException e){}
-        try {c+=board1[x - 1][y - 1] ;}catch (ArrayIndexOutOfBoundsException e){}
+        int c = 0;
+        try {
+            c += board1[x][y + 1];
+        } catch (ArrayIndexOutOfBoundsException e) {
+        }
+        try {
+            c += board1[x][y - 1];
+        } catch (ArrayIndexOutOfBoundsException e) {
+        }
+        try {
+            c += board1[x + 1][y + 1];
+        } catch (ArrayIndexOutOfBoundsException e) {
+        }
+        try {
+            c += board1[x + 1][y];
+        } catch (ArrayIndexOutOfBoundsException e) {
+        }
+        try {
+            c += board1[x + 1][y - 1];
+        } catch (ArrayIndexOutOfBoundsException e) {
+        }
+        try {
+            c += board1[x - 1][y + 1];
+        } catch (ArrayIndexOutOfBoundsException e) {
+        }
+        try {
+            c += board1[x - 1][y];
+        } catch (ArrayIndexOutOfBoundsException e) {
+        }
+        try {
+            c += board1[x - 1][y - 1];
+        } catch (ArrayIndexOutOfBoundsException e) {
+        }
         return c;
     }
 

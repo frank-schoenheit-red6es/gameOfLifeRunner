@@ -1,9 +1,9 @@
-package de.red6.gameoflive.sven;
+package de.red6.gameoflife.sven;
 
 import de.red6.gameoflife.runner.Board;
 
 
-public class Sven2BoardImpl implements Board {
+public class BooleanArrayPreventingOutOfBoundsBoardImpl implements Board {
 
 
     private boolean[][] board;
@@ -28,16 +28,15 @@ public class Sven2BoardImpl implements Board {
     private int countNeighbours(int x, int y) {
         int count = 0;
 
-        for (int ax = x - 1; ax <= x + 1; ax++) {
-            for (int ay = y - 1; ay <= y + 1; ay++) {
-                try {
-                    if ((ax != x || ay != y) && board[ax][ay]) {
-                        count++;
-                        if (count == 4) {
-                            return count;
-                        }
+        int maxx = Math.min(x + 1, size - 1);
+        int maxy = Math.min(y + 1, size - 1);
+        for (int ax = Math.max(x - 1,0); ax <= maxx; ax++) {
+            for (int ay = Math.max(y - 1,0); ay <= maxy; ay++) {
+                if ((ax != x || ay != y) && board[ax][ay]) {
+                    count++;
+                    if (count == 4) {
+                        return count;
                     }
-                } catch (ArrayIndexOutOfBoundsException e) {
                 }
             }
         }

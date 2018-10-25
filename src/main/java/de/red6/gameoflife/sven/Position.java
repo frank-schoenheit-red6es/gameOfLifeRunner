@@ -1,4 +1,4 @@
-package de.red6.gameoflive.sven;
+package de.red6.gameoflife.sven;
 
 public class Position {
     private int neighbours;

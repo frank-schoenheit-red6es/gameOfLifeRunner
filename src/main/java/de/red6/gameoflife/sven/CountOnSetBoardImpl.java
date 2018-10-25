@@ -1,9 +1,9 @@
-package de.red6.gameoflive.sven;
+package de.red6.gameoflife.sven;
 
 import de.red6.gameoflife.runner.Board;
 
 
-public class Sven0BoardImpl implements Board {
+public class CountOnSetBoardImpl implements Board {
 
 
     private Position[][] board;
