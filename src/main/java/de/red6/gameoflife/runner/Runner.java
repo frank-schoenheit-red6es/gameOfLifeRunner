@@ -44,7 +44,7 @@ public class Runner {
             doRun();
         } finally {
             final long end = System.currentTimeMillis();
-            System.out.println(String.format("miliseconds elapsed: %s", end - start));
+            System.out.println(end - start);
         }
     }
 
