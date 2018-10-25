@@ -67,8 +67,4 @@ public class CalcNeighboursOnceBoard implements Board {
         }
         this.cells = newCells;
     }
-
-    private int activeCount(final int xPlusOne, final int yPlusOne) {
-        return cells[xPlusOne][yPlusOne] ? 1 : 0;
-    }
 }
