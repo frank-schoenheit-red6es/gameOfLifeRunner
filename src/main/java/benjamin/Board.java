@@ -59,7 +59,7 @@ public class Board implements de.red6.gameoflife.runner.Board {
         if (livingCellsCount < 2 || livingCellsCount > 3) {
             return false;
         } else {
-            return false;
+            return true;
         }
     }
 }
