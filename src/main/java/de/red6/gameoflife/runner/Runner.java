@@ -34,6 +34,7 @@ public class Runner {
 
         @SuppressWarnings("unchecked") final Class<? extends Board> boardClass = (Class<? extends Board>) Class.forName(implementationName);
         final Board board = boardClass.getDeclaredConstructor().newInstance();
+        board.init(boardSize);
         new Runner(board, boardSize, seed, fillingLevel, steps).run();
     }
 
