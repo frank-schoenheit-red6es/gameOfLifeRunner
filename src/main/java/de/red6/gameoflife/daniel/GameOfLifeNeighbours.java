@@ -2,11 +2,10 @@ package de.red6.gameoflife.daniel;
 
 import de.red6.gameoflife.runner.Board;
 
-public class GameOfLifeMitAbbruch implements Board {
+public class GameOfLifeNeighbours implements Board {
 
     private boolean[][] grid;
     private int dimension;
-    private boolean isTerminated = false;
 
     public void init(int size) {
         dimension = size;
@@ -22,22 +21,13 @@ public class GameOfLifeMitAbbruch implements Board {
     }
 
     public void step() {
-        if (isTerminated) {
-            return;
-        } else {
-            isTerminated = true;
-        }
         boolean[][] iteratedGrid = new boolean[dimension][dimension];
 
         for (int i = 0; i < grid.length; i++) {
             for (int j = 0; j < grid.length; j++) {
                 iteratedGrid[i][j] = evaluateCellState(i, j, grid[i][j]);
-                if (iteratedGrid[i][j] != grid[i][j]) {
-                    isTerminated = false;
-                }
             }
         }
-        
         grid = iteratedGrid;
     }
 
@@ -52,22 +42,21 @@ public class GameOfLifeMitAbbruch implements Board {
 
     private int countNeighboursFor(int x, int y) {
         int neighbourCount = 0;
-        neighbourCount += isAliveNeighbour(x-1, y-1);
-        neighbourCount += isAliveNeighbour(x-1, y);
-        neighbourCount += isAliveNeighbour(x-1, y+1);
-        neighbourCount += isAliveNeighbour(x, y-1);
-        neighbourCount += isAliveNeighbour(x, y+1);
-        neighbourCount += isAliveNeighbour(x+1, y-1);
-        neighbourCount += isAliveNeighbour(x+1, y);
-        neighbourCount += isAliveNeighbour(x+1, y+1);
+        for (int i = x-1; i<=x+1; i++) {
+            for (int j = y-1; j<=y+1; j++) {
+                if (isAliveNeighbour(i,j) && !(i == x && j==y)) {
+                    neighbourCount += 1;
+                }
+            }
+        }
         return neighbourCount;
     }
 
-    private int isAliveNeighbour(int x, int y) {
+    private boolean isAliveNeighbour(int x, int y) {
         try {
-            return grid[x][y] ? 1 : 0;
+            return grid[x][y];
         } catch (ArrayIndexOutOfBoundsException e) {
-            return 0;
+            return false;
         }
     }
 
