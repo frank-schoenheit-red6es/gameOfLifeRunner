@@ -2,6 +2,7 @@
 
 declare implementations=""
 #implementations="${implementations} de.red6.gameoflife.impl.saraj.BoardImpl"
+#implementations="${implementations} de.red6.gameoflife.impl.saraj2.BoardImpl"
 implementations="${implementations} de.red6.gameoflife.daniel.GameOfLifeMitAbbruch"
 implementations="${implementations} de.red6.gameoflife.daniel.GameOfLife"
 
