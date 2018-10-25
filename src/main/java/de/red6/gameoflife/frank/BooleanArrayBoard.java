@@ -44,16 +44,14 @@ public class BooleanArrayBoard implements Board {
         this.cells = newCells;
     }
 
-    @SuppressWarnings("PointlessArithmeticExpression")
     private int neighbours(final int x, final int y) {
         return activeCount(x - 1, y - 1)
-                + activeCount(x - 1, y + 0)
+                + activeCount(x - 1, y)
                 + activeCount(x - 1, y + 1)
-                + activeCount(x + 0, y - 1)
-//                + activeCount(x + 0, y + 0)
-                + activeCount(x + 0, y + 1)
+                + activeCount(x, y - 1)
+                + activeCount(x, y + 1)
                 + activeCount(x + 1, y - 1)
-                + activeCount(x + 1, y + 0)
+                + activeCount(x + 1, y)
                 + activeCount(x + 1, y + 1);
     }
 
