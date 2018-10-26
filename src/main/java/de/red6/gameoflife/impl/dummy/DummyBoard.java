@@ -15,6 +15,11 @@ public class DummyBoard implements Board {
     }
 
     @Override
+    public void shutdown() {
+        // nope
+    }
+
+    @Override
     public void setAlive(int x, int y) {
         // nope
     }

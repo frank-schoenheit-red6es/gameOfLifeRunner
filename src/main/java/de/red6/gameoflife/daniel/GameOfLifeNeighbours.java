@@ -12,6 +12,11 @@ public class GameOfLifeNeighbours implements Board {
         grid = new boolean[dimension][dimension];
     }
 
+    @Override
+    public void shutdown() {
+        // noop
+    }
+
     public void setAlive(int x, int y) {
         grid[x][y] = true;
     }

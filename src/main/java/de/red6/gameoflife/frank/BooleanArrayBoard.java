@@ -19,6 +19,11 @@ public class BooleanArrayBoard implements Board {
     }
 
     @Override
+    public void shutdown() {
+        // noop
+    }
+
+    @Override
     public void setAlive(final int x, final int y) {
         this.cells[x][y] = true;
     }

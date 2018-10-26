@@ -13,6 +13,11 @@ public class Board implements de.red6.gameoflife.runner.Board {
         this.size = size;
     }
 
+    @Override
+    public void shutdown() {
+        // noop
+    }
+
     public void setAlive(int x, int y) {
         livingCells.add(new Cell(x, y));
     }

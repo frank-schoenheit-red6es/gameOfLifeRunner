@@ -28,7 +28,7 @@ public class Runner extends AbstractBoardRunner {
         new Runner(board).run(steps);
     }
 
-    private void run(final long steps) {
+    private void run(final long steps) throws InterruptedException {
         final long start = System.currentTimeMillis();
         try {
             doRun(steps);
@@ -38,9 +38,10 @@ public class Runner extends AbstractBoardRunner {
         }
     }
 
-    private void doRun(final long steps) {
+    private void doRun(final long steps) throws InterruptedException {
         for (long i = 0; i < steps; ++i) {
             this.board.step();
         }
+        board.shutdown();
     }
 }

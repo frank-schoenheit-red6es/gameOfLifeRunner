@@ -16,6 +16,11 @@ public class BoardImpl implements Board {
     }
 
     @Override
+    public void shutdown() {
+        // noop
+    }
+
+    @Override
     public void setAlive(int x, int y) {
         final Cell cell = new Cell(x, y);
         aliveCells.add(cell);

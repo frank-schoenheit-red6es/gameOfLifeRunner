@@ -17,6 +17,9 @@ public class IntArrayBoardWithEnlargmentImpl implements Board {
         board2 = new int[size+2][size+2];
     }
 
+    public void shutdown() {
+        // noop
+    }
 
     public boolean isAlive(int x, int y) {
         return board1[x+1][y+1] == 1;

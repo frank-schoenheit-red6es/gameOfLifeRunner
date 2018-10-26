@@ -14,6 +14,10 @@ public class BooleanArrayPreventingOutOfBoundsBoardImpl implements Board {
         board = new boolean[size][size];
     }
 
+    @Override
+    public void shutdown() {
+        // noop
+    }
 
     public boolean isAlive(int x, int y) {
         return board[x][y];

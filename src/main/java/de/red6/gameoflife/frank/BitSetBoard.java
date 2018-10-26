@@ -21,6 +21,11 @@ public class BitSetBoard implements Board {
     }
 
     @Override
+    public void shutdown() {
+        // noop
+    }
+
+    @Override
     public void setAlive(int x, int y) {
         this.rows[y].set(x);
     }

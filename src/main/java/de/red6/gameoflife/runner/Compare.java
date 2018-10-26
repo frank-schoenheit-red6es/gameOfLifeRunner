@@ -50,5 +50,7 @@ public class Compare extends AbstractBoardRunner {
             printer.print(22, 1, board2, boardSize);
             Thread.sleep(100);
         }
+        board1.shutdown();
+        board2.shutdown();
     }
 }

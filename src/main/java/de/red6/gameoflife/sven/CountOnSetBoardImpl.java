@@ -14,6 +14,10 @@ public class CountOnSetBoardImpl implements Board {
         board = new Position[size][size];
     }
 
+    @Override
+    public void shutdown() {
+        // noop
+    }
 
     public boolean isAlive(int x, int y) {
         return board[x][y] != null && (board[x][y]).isAlive();

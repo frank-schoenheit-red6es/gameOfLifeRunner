@@ -4,7 +4,6 @@ import de.red6.gameoflife.runner.Board;
 
 import java.util.AbstractMap;
 import java.util.HashSet;
-import java.util.Map;
 import java.util.Set;
 
 public class BoardImpl implements Board {
@@ -22,6 +21,11 @@ public class BoardImpl implements Board {
                 points.add(new AbstractMap.SimpleEntry<Integer, Integer>(i, j));
             }
         }
+    }
+
+    @Override
+    public void shutdown() {
+        // noop
     }
 
     @Override

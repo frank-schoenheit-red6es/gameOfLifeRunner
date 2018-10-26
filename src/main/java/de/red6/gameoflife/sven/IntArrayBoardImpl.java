@@ -2,8 +2,6 @@ package de.red6.gameoflife.sven;
 
 import de.red6.gameoflife.runner.Board;
 
-import java.util.Objects;
-
 
 public class IntArrayBoardImpl implements Board {
 
@@ -19,6 +17,9 @@ public class IntArrayBoardImpl implements Board {
         board2 = new int[size][size];
     }
 
+    public void shutdown() {
+        // noop
+    }
 
     public boolean isAlive(int x, int y) {
         return board1[x][y] == 1;

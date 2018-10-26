@@ -23,6 +23,11 @@ public class CalcNeighboursOnceBoard implements Board {
     }
 
     @Override
+    public void shutdown() {
+        // noop
+    }
+
+    @Override
     public void setAlive(final int x, final int y) {
         this.cells[x + 1][y + 1] = true;
     }
